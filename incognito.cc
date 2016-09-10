@@ -8,7 +8,6 @@ int main() {
   int T,N;
   std::cin >> T;
   for (int t=0; t<T; ++t) {
-    std::cout << t << std::endl;
     std::unordered_map<std::string, int> map;
     std::cin >> N;
     for (int n=0; n<N; ++n) {
@@ -17,11 +16,12 @@ int main() {
       if (map.count(s2) > 0)
         map[s2] += 1;
       else
-        map[s2] = 0;
+        map[s2] = 1;
     }
-    for (auto i : map) {
-      std::cout << i.first << ": " << i.second << std::endl;
-    }
+    long num = 1;
+    for (auto i : map)
+      num *= (long)(i.second+1);
+    std::cout << (num-1) << std::endl;
   }
   return 0;
 }
