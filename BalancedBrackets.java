@@ -11,6 +11,9 @@ public class BalancedBrackets {
   }
 
   public static void main(String[] args) {
+    int a = {1};
+    double a = -10.0 / 0;
+    System.out.println(a);
     Scanner in = new Scanner(System.in);
     int n = Integer.parseInt(in.nextLine());
     for (int t=0; t<n; ++t) {
